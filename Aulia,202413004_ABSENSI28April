@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #02fd28, #02f90f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+}
+
+.card {
+    background-color: #151516; /* Warna merah pink utama */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    display: flex;/*membuat elemen di dalam kolom*/
+    gap: 10px;/*memberikan jarak*/
+    margin-bottom: 15px;/*memiliki lebar yang sama*/
+}
+
+input, select {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn-simpan {
+    background-color: #2ecc71; /* Warna hijau tombol */
+    color: white;
+    border: none;/*menghilangkan garis hitam di pinggir*/
+    padding: 10px 20px;
+    border-radius: 8px;/*menmbuat sudut kotak menjadi tumpul*/
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-simpan:hover {
+    background-color: #27ae60;
+}
+
+.search-group input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Pengaturan Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    padding: 15px 5px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+</style>
+<body>
+    
+
+    <div class="container">
+        <div class="card">
+            <h2>🎓 Manajemen Mahasiswa</h2>
+            
+            <div class="input-group">
+                <input type="text" placeholder="NIM">
+                <input type="text" placeholder="Nama Lengkap">
+            </div>
+
+            <div class="input-group">
+                <input type="text" placeholder="Alamat" class="full-width">
+            </div>
+
+            <div class="input-group">
+                <select>
+                    <option value="">-- Pilih Jenis Kelamin --</option>
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
+                </select>
+                <input type="password" placeholder="Password">
+            </div>
+
+            <button class="btn-simpan">Simpan Data</button>
+
+            <div class="search-group">
+                <input type="text" placeholder="Cari NIM / Nama">
+            </div>
+
+            <h3>Data Mahasiswa</h3>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>JK</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
